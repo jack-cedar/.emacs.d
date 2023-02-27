@@ -55,6 +55,19 @@
   ;; Setup Global Keybindings for EXWM
   (exwm-input-global-keys
    `(
+
+     ([XF86AudioLowerVolume] . (lambda ()
+				  (interactive)
+				   (start-process-shell-command
+				    "amixer" nil "amixer -q sset Master 2%-")))
+     ([XF86AudioRaiseVolume] . (lambda () (interactive)
+				   (start-process-shell-command
+				    "amixer" nil "amixer -q sset Master 2%+")))
+     ([XF86AudioMute] . (lambda () (interactive)
+				 (start-process-shell-command
+				  "amixer" nil "amixer set Master toggle")))
+     
+     
      ;; Reset To Line Mode
      ([?\s-r] . exwm-reset)
 
