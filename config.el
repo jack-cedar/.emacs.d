@@ -7,11 +7,8 @@
 (gen-window-config)
 (exwm-init)
 
-
-
-
 (require 'jc-meow)
-;(require 'jc-lsp)
+(require 'jc-lsp)
 
 (prog-modes
  rust-mode
