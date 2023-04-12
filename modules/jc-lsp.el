@@ -2,9 +2,11 @@
 
 (use-package lsp-bridge
  :defer t
- :straight (lsp-bridge :host github
+ :elpaca (lsp-bridge :host github
               :repo "manateelazycat/lsp-bridge"
               :files ("*.el" "*.py" "acm" "core" "langserver"
-                      "multiserver" "resources")))
+                      "multiserver" "resources"))
+ :config
+ (global-lsp-bridge-mode))
 
 (provide 'jc-lsp)

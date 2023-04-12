@@ -22,7 +22,9 @@
           (interactive)
           (when ,process-name
           (ignore-errors
-            (,kill-process-name ,process-name))))
+            (kill-process ,process-name))
+	  (setq ,process-name nil)
+	  ))
 
        ;;Define a function to start the process
        (defun ,start-process-name ()
@@ -39,8 +41,6 @@
 
 
 (use-package exwm
-  :straight t
-
   :custom
   ;; Set my Default ammount of Workspaces
   (exwm-workspace-number 5)
@@ -94,7 +94,7 @@
 
 
 )
-  
+(elpaca-wait)
   
 (provide 'jc-exwm)
 

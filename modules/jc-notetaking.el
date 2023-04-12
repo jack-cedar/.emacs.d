@@ -1,5 +1,4 @@
 (require 'jc-orgtools)
-
 (use-package denote
   :defer t
   :custom
@@ -18,7 +17,7 @@
 		 :jump-to-captured t)))
 
 (use-package xeft
-  :straight 
+  :elpaca
   (xeft :type git :host nil :repo "https://git.sr.ht/~casouri/xeft")
   :defer t
   :custom

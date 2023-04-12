@@ -1,3 +1,4 @@
+(require 'jc-defaults)
 
 (require 'jc-exwm)
 (defprocess my-bar "~/configs/lemonbar/lemonbar" :autostart t)
@@ -6,23 +7,23 @@
 (gen-window-config)
 (exwm-init)
 
-(require 'jc-complete-ui)
-(require 'jc-dashboard)
-(require 'jc-vmoc)
-(require 'jc-notetaking)
-(require 'jc-devtools)
-(require 'jc-consult)
+
 
 
 (require 'jc-meow)
+;(require 'jc-lsp)
 
-(require 'jc-lsp)
+(prog-modes
+ rust-mode
+ zig-mode
+ haskell-mode
+ )
 
-;; Prog Modes
-(use-package nix-mode)
-(use-package clojure-mode)
+(use-package cider :defer t)
 
-(setq delete-by-moving-to-trash t)
-(custom-set-faces
- '(mode-line-inactive ((t (:background nil)))))
+
+(use-package envrc :config (envrc-global-mode))
+
+
+
 

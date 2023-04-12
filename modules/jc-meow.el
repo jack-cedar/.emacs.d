@@ -1,4 +1,8 @@
-(defun meow-setup ()
+
+
+(use-package meow
+  :config
+  (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
   (meow-motion-overwrite-define-key
    '("j" . meow-next)
@@ -57,7 +61,7 @@
    '("n" . meow-search)
    '("o" . meow-block)
    '("O" . meow-to-block)
-   '("p" . meow-yank)
+   '("y" . meow-yank)
    '("q" . meow-quit)
    '("Q" . meow-goto-line)
    '("r" . meow-replace)
@@ -75,9 +79,10 @@
    '("Y" . meow-sync-grab)
    '("z" . meow-pop-selection)
    '("'" . repeat)))
+  (meow-setup)
+  (meow-global-mode 1)
+  
+  )
 
-(use-package meow)
-(meow-setup)
-(meow-global-mode 1)
 
 (provide 'jc-meow)

@@ -1,8 +1,11 @@
 (use-package mood-line
   :init (mood-line-mode))
 
-(use-package doom-themes)
+(use-package doom-themes
+:init
 (jc-set-theme 'doom-tokyo-night)
+  )
+
 
 (set-face-attribute 'default nil
 		    :font "Iosevka 15"

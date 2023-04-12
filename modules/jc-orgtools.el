@@ -1,9 +1,9 @@
-(use-package org
-  :defer t)
 (require 'org-tempo)
 (use-package org-modern
-  :defer t)
-(global-org-modern-mode)
+  :defer t
+  :config
+  (global-org-modern-mode))
+
 
 (setq org-babel-lisp-eval-fn #'sly-eval)
 (setq haskell-process-type  'stack-ghci)
